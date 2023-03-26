@@ -23,3 +23,10 @@
         padding: 30px 10px 30px 15px !important;
     }
 }
+
+@media only screen and (max-width: 700px) {
+    .content-con {
+        flex-direction: column-reverse !important;
+        align-items: center !important;
+    }
+}
