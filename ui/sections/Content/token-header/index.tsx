@@ -3,19 +3,14 @@ import DownArrowIcon from '@/ui/components/Icons/DownArrowIcon';
 import ShareButton from '@/ui/components/share-button';
 import TokenContext from '@/ui/store/token-context';
 import React, { useContext, useMemo } from 'react';
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 import styles from './TokenHeader.module.scss';
 import { sand, crv, eth, dai, mana, mask, ren, swrv, uni, usdc, usdt, wbtc } from '@/ui/assets';
-
-interface IGettingImages {
-	id: string;
-	image: StaticImageData;
-}
 
 const TokenHeaderInfo = () => {
 	const tokenCtx = useContext(TokenContext);
 
-	const imagesTo: IGettingImages[] = useMemo(
+	const imagesTo = useMemo(
 		() => [
 			{ id: 'sand', image: sand },
 			{ id: 'crv', image: crv },
@@ -33,7 +28,7 @@ const TokenHeaderInfo = () => {
 		[]
 	);
 
-	const findImage = useMemo(() => imagesTo.find((image: IGettingImages) => tokenCtx.activeToken.id == image.id), [imagesTo, tokenCtx.activeToken.id]);
+	const findImage = useMemo(() => imagesTo.find(image => tokenCtx.activeToken.id == image.id), [imagesTo, tokenCtx.activeToken.id]);
 
 	return (
 		<>
