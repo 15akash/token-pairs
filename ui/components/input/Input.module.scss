@@ -1,0 +1,34 @@
+.input-con {
+    background-color: rgb(247, 247, 255);
+    border-radius: 12px;
+    border: 1px solid rgb(247, 247, 255);
+    
+    input {
+        background-color: transparent;
+        width: 100%;
+        border: none;
+        outline: none;
+        text-align: right;
+        padding: 10px;
+        color: #7578b5;
+        font-weight: 500;
+        font-size: 16px;
+    }
+
+    input::placeholder {
+        color: #7578b5;
+        font-weight: 500;
+        font-size: 16px;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+}

@@ -1,0 +1,28 @@
+.token-header-con {
+    width: 100%;
+
+    .token-name-con {
+        gap: 10px;
+    }
+    
+    .select-token-con {
+        gap: 20px;
+    
+        .select-token {
+            gap: 7px;  
+            cursor: pointer; 
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    
+    .token-header-con {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+
+    .select-token-con {
+        align-items: flex-end !important;
+    }
+  }

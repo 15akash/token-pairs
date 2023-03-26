@@ -1,0 +1,25 @@
+.content-con {
+    gap: 90px;
+    padding: 60px;
+
+    .content-left-con {
+        flex: 1;
+        
+        .chart {
+            width: 100%;
+        }
+    }
+    .content-right-con {
+        background-color: rgb(255, 255, 255);
+        border-radius: 20px;    
+        width: 370px;
+      
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .content-con {
+        gap: 20px;
+        padding: 30px 10px 30px 15px !important;
+    }
+}

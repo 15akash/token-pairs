@@ -1,0 +1,23 @@
+.search-btn-con {
+    align-items: center;
+    color: rgb(31, 31, 65);
+    display: flex;
+    flex-direction: row;
+    max-height: 40px;
+    max-width: 100px;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(232, 236, 253);
+    border-radius: 13px;
+    padding: 12px;
+    gap: 13px;
+    cursor: pointer;
+}
+
+.search-btn-con:hover {
+    border: 1px solid rgb(112, 110, 255);
+    color: rgb(112, 110, 255);
+    border-radius: 13px;
+    padding: 12px;
+    gap: 13px;
+    cursor: pointer;
+}
