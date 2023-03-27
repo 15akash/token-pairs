@@ -12,7 +12,8 @@
 			"volume24Low": "$1446.97",
 			"high24Hour": "$1529.56",
 			"currentPrice": "$1587.93",
-			"imageUrl": "./assets/eth.webp"
+			"imageUrl": "./assets/eth.webp",
+			"tokenAddress": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
 		},
 		{
 			"id": "dai",
@@ -25,7 +26,8 @@
 			"volume24High": "$1.29B USD",
 			"volume24Low": "$0.941944",
 			"high24Hour": "$0.984121",
-			"currentPrice": "$1.00"
+			"currentPrice": "$1.00",
+			"tokenAddress": "0x6b175474e89094c44da98b954eedeac495271d0f"
 		},
 		{
 			"id": "crv",
@@ -38,7 +40,8 @@
 			"volume24High": "$74.06M USD",
 			"volume24Low": "$0.80823",
 			"high24Hour": "$0.896391",
-			"currentPrice": "$0.92"
+			"currentPrice": "$0.92",
+			"tokenAddress": "0xd533a949740bb3306d119cc777fa900ba034cd52"
 		},
 		{
 			"id": "mana",
@@ -51,7 +54,8 @@
 			"volume24High": "$59.15M USD",
 			"volume24Low": "$0.507562",
 			"high24Hour": "$0.537373",
-			"currentPrice": "$0.55"
+			"currentPrice": "$0.55",
+			"tokenAddress": "0x0f5d2fb29fb7d3cfee444a200298f468908cc942"
 		},
 		{
 			"id": "ren",
@@ -64,7 +68,8 @@
 			"volume24High": "$13.22M USD",
 			"volume24Low": "$0.074982",
 			"high24Hour": "$0.079916",
-			"currentPrice": "$0.08"
+			"currentPrice": "$0.08",
+			"tokenAddress": "0x408e41876cccdc0f92210600ef50372656052a38"
 		},
 		{
 			"id": "sand",
@@ -77,7 +82,8 @@
 			"volume24High": "$97M USD",
 			"volume24Low": "$0.515389",
 			"high24Hour": "$0.538622",
-			"currentPrice": "$0.55"
+			"currentPrice": "$0.55",
+			"tokenAddress": "0x3845badade8e6dff049820680d1f14bd3903a5d0"
 		},
 		{
 			"id": "swrv",
@@ -90,7 +96,8 @@
 			"volume24High": "$227.88K USD",
 			"volume24Low": "$0.105175",
 			"high24Hour": "$0.114715",
-			"currentPrice": "$0.12"
+			"currentPrice": "$0.12",
+			"tokenAddress": "0xb8baa0e4287890a5f79863ab62b7f175cecbd433"
 		},
 		{
 			"id": "uni",
@@ -103,7 +110,8 @@
 			"volume24High": "$80.1M USD",
 			"volume24Low": "$5.38",
 			"high24Hour": "$5.65",
-			"currentPrice": "$5.83"
+			"currentPrice": "$5.83",
+			"tokenAddress": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984"
 		},
 		{
 			"id": "usdc",
@@ -116,7 +124,8 @@
 			"volume24High": "$8.8B USD",
 			"volume24Low": "$0.937664",
 			"high24Hour": "$0.97547",
-			"currentPrice": "$1.00"
+			"currentPrice": "$1.00",
+			"tokenAddress": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
 		},
 		{
 			"id": "usdt",
@@ -129,7 +138,8 @@
 			"volume24High": "$40.64B USD",
 			"volume24Low": "$0.999112",
 			"high24Hour": "$1.016",
-			"currentPrice": "$1.04"
+			"currentPrice": "$1.04",
+			"tokenAddress": "0xdac17f958d2ee523a2206206994597c13d831ec7"
 		},
 		{
 			"id": "wbtc",
@@ -142,7 +152,8 @@
 			"volume24High": "$303.16M USD",
 			"volume24Low": "$20239",
 			"high24Hour": "$21048",
-			"currentPrice": "$21912.70"
+			"currentPrice": "$21912.70",
+			"tokenAddress": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599"
 		},
 		{
 			"id": "mask",
@@ -155,7 +166,8 @@
 			"volume24High": "$73.49M USD",
 			"volume24Low": "$2.7",
 			"high24Hour": "$2.92",
-			"currentPrice": "$3.01"
+			"currentPrice": "$3.01",
+			"tokenAddress": "0x69af81e73a73b40adf4f3d4223cd9b1ece623074"
 		}
 	]
 }

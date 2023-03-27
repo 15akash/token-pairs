@@ -10,7 +10,7 @@ export interface IToken {
 	volume24Low: string;
 	high24Hour: string;
 	currentPrice: string;
-	imageUrl?: string;
+	tokenAddress: string;
 }
 
 export interface ITokenData {
