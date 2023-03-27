@@ -4,9 +4,9 @@ import styles from './Input.module.scss';
 
 const Input = () => {
 	return (
-		<Flexbox className={styles['input-con']}>
+		<Flexbox direction="column" alignItems="flex-end" className={styles['input-con']}>
 			<input type="number" placeholder="0" />
-			<p></p>
+			<p>$0.00</p>
 		</Flexbox>
 	);
 };

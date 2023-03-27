@@ -2,6 +2,20 @@
     background-color: rgb(247, 247, 255);
     border-radius: 12px;
     border: 1px solid rgb(247, 247, 255);
+    text-align: right;
+    position: relative;
+
+    p {
+      margin: 0;
+      position: absolute;
+      right: 13;
+      bottom: 2px;
+      text-align: right;
+      padding: 0 10px;
+      color: rgb(117, 120, 181);
+      font-size: 12px;
+      font-weight: 500;
+    }
     
     input {
         background-color: transparent;
@@ -10,15 +24,17 @@
         outline: none;
         text-align: right;
         padding: 10px;
-        color: #7578b5;
-        font-weight: 500;
-        font-size: 16px;
+        color: rgb(31, 31, 65);
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 7px;
+        line-height: 26px;
     }
 
     input::placeholder {
         color: #7578b5;
         font-weight: 500;
-        font-size: 16px;
+        font-size: 20px;
     }
 
     input::-webkit-outer-spin-button,
