@@ -11,6 +11,7 @@ import styles from './TokenPairSelector.module.scss';
 
 const TokenPairSelector = () => {
 	const [isTokenListShown, setIsTokenListShown] = useState<boolean>(false);
+	const [selectTitle, setSelectTitle] = useState<string>('');
 
 	return (
 		<Flexbox direction="column" className={styles['token-pair-selector']}>
@@ -21,9 +22,9 @@ const TokenPairSelector = () => {
 				</Flexbox>
 				<SettingsIcon />
 			</Flexbox>
-			<TokenDropdown setIsTokenListShown={setIsTokenListShown} title="You Pay" />
-			<TokenDropdown setIsTokenListShown={setIsTokenListShown} title="You Receive" />
-			{isTokenListShown && <SelectToken setIsTokenListShown={setIsTokenListShown} />}
+			<TokenDropdown setIsTokenListShown={setIsTokenListShown} title="You Pay" setSelectTitle={setSelectTitle} />
+			<TokenDropdown setIsTokenListShown={setIsTokenListShown} title="You Receive" setSelectTitle={setSelectTitle} />
+			{isTokenListShown && <SelectToken setIsTokenListShown={setIsTokenListShown} title={selectTitle} />}
 			<button>Connect Wallet</button>
 		</Flexbox>
 	);

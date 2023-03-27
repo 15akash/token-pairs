@@ -33,7 +33,7 @@ const SelectToken = (props: any) => {
 		<Flexbox direction="column" className={styles['token-list-con']}>
 			<Flexbox direction="column" className={styles['token-list-content']}>
 				<Flexbox alignItems="center" justifyContent="space-between" className={styles['token-list-header']}>
-					<h4>You Pay</h4>
+					<h4>{props.title}</h4>
 					<button onClick={() => props.setIsTokenListShown(false)}>
 						<CloseIcon />
 					</button>

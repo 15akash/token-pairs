@@ -9,7 +9,11 @@ const TokenDropdown = (props: any) => {
 		<Flexbox direction="column">
 			<h4>{props.title}</h4>
 			<div className={styles['select-token-con']}>
-				<h2 onClick={() => props.setIsTokenListShown(true)}>
+				<h2
+					onClick={() => {
+						props.setSelectTitle(props.title);
+						props.setIsTokenListShown(true);
+					}}>
 					Chose token
 					<DownArrowIcon />
 				</h2>
