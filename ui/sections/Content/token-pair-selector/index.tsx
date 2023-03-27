@@ -1,8 +1,4 @@
-import CloseIcon from '@/ui/components/Icons/CloseIcon';
-import DownArrowIcon from '@/ui/components/Icons/DownArrowIcon';
-import SearchIcon from '@/ui/components/Icons/SearchIcon';
 import SettingsIcon from '@/ui/components/Icons/SettingsIcon';
-import Input from '@/ui/components/input';
 import SelectToken from '@/ui/components/select-token';
 import TokenDropdown from '@/ui/components/token-dropdown';
 import Flexbox from '@/ui/foundations/flexbox';
@@ -25,7 +21,7 @@ const TokenPairSelector = () => {
 			<TokenDropdown setIsTokenListShown={setIsTokenListShown} title="You Pay" setSelectTitle={setSelectTitle} />
 			<TokenDropdown setIsTokenListShown={setIsTokenListShown} title="You Receive" setSelectTitle={setSelectTitle} />
 			{isTokenListShown && <SelectToken setIsTokenListShown={setIsTokenListShown} title={selectTitle} />}
-			<button>Connect Wallet</button>
+			<button>Place order</button>
 		</Flexbox>
 	);
 };

@@ -11,6 +11,14 @@ const defaultTokenState: ITokenState = {
 
 const tokenReducer = (state: ITokenState, action: ITokenAction) => {
 	if (action.type === 'You Pay') {
+		if (action.token.id === state.tokenReceive.id) {
+			alert('Same token selected. Please select different token');
+			return {
+				tokenPay: state.tokenPay,
+				tokenReceive: state.tokenReceive,
+				activeToken: state.activeToken
+			};
+		}
 		return {
 			tokenPay: action.token,
 			tokenReceive: state.tokenReceive,
@@ -18,6 +26,14 @@ const tokenReducer = (state: ITokenState, action: ITokenAction) => {
 		};
 	}
 	if (action.type === 'You Receive') {
+		if (action.token.id === state.tokenPay.id) {
+			alert('Same token selected. Please select different token');
+			return {
+				tokenPay: state.tokenPay,
+				tokenReceive: state.tokenReceive,
+				activeToken: state.activeToken
+			};
+		}
 		return {
 			tokenPay: state.tokenPay,
 			tokenReceive: action.token,
