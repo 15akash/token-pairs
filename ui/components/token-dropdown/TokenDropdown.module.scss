@@ -1,0 +1,21 @@
+.select-token-con {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid rgb(232, 236, 253);
+    padding-bottom: 25px;
+
+    h2 {
+        padding: 5px 5px 5px 2px;
+        cursor: pointer;
+        border-radius: 4px;
+        margin: 10px 0;
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        max-width: 150px;
+    }
+    
+    h2:hover{
+        background-color: rgb(232, 236, 253);
+    }
+}
