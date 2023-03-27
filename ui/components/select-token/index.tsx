@@ -4,30 +4,14 @@ import Flexbox from '@/ui/foundations/flexbox';
 import CloseIcon from '../Icons/CloseIcon';
 import SearchIcon from '../Icons/SearchIcon';
 import TokenContext from '@/ui/store/token-context';
-import { sand, crv, eth, dai, mana, mask, ren, swrv, uni, usdc, usdt, wbtc } from '../../assets/index';
 import { IToken } from '@/ui/interfaces/TokenInterface';
 import Image from 'next/image';
+import { useTokenImages } from '../custom-hook/getImages';
 
 const SelectToken = (props: any) => {
 	const tokenCtx = useContext(TokenContext);
 
-	const imagesTo = useMemo(
-		() => [
-			{ id: 'sand', image: sand },
-			{ id: 'crv', image: crv },
-			{ id: 'eth', image: eth },
-			{ id: 'dai', image: dai },
-			{ id: 'mana', image: mana },
-			{ id: 'mask', image: mask },
-			{ id: 'ren', image: ren },
-			{ id: 'swrv', image: swrv },
-			{ id: 'uni', image: uni },
-			{ id: 'usdc', image: usdc },
-			{ id: 'usdt', iamge: usdt },
-			{ id: 'wbtc', image: wbtc }
-		],
-		[]
-	);
+	const tokenLogo = useTokenImages();
 
 	return (
 		<Flexbox direction="column" className={styles['token-list-con']}>
@@ -47,9 +31,15 @@ const SelectToken = (props: any) => {
 				<Flexbox direction="column" className={styles['token-list']}>
 					{tokenCtx.tokens.map((token: IToken) => {
 						return (
-							<Flexbox alignItems="center" key={token.id} className={styles['token-con']}>
+							<div
+								key={token.id}
+								onClick={() => {
+									tokenCtx.selectToken(token, props.title);
+									props.setIsTokenListShown(false);
+								}}
+								className={styles['token-con']}>
 								<Image
-									src={imagesTo.find(t => t.id === token.id)?.image ?? ''}
+									src={tokenLogo.find(t => t.id === token.id)?.image ?? ''}
 									style={{ borderRadius: '50px', border: '1px solid black', marginRight: '20px' }}
 									alt={token.id}
 									width={46}
@@ -57,7 +47,7 @@ const SelectToken = (props: any) => {
 								/>
 								<h4>{`${token.name}`} &nbsp;</h4>
 								<h4 style={{ color: 'rgb(117, 120, 181)' }}>{`- ${token.id.toLocaleUpperCase()}`}</h4>
-							</Flexbox>
+							</div>
 						);
 					})}
 				</Flexbox>

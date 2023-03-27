@@ -16,3 +16,14 @@ export interface IToken {
 export interface ITokenData {
 	tokensData: IToken[];
 }
+
+export interface ITokenState {
+	tokenPay: IToken;
+	tokenReceive: IToken;
+	activeToken: IToken;
+}
+
+export interface ITokenAction {
+	token: IToken;
+	type: string;
+}

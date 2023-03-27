@@ -5,30 +5,13 @@ import TokenContext from '@/ui/store/token-context';
 import React, { useContext, useMemo } from 'react';
 import Image from 'next/image';
 import styles from './TokenHeader.module.scss';
-import { sand, crv, eth, dai, mana, mask, ren, swrv, uni, usdc, usdt, wbtc } from '@/ui/assets';
+import { useTokenImages } from '@/ui/components/custom-hook/getImages';
 
 const TokenHeaderInfo = () => {
 	const tokenCtx = useContext(TokenContext);
+	const getTokenLogo = useTokenImages();
 
-	const imagesTo = useMemo(
-		() => [
-			{ id: 'sand', image: sand },
-			{ id: 'crv', image: crv },
-			{ id: 'eth', image: eth },
-			{ id: 'dai', image: dai },
-			{ id: 'mana', image: mana },
-			{ id: 'mask', image: mask },
-			{ id: 'ren', image: ren },
-			{ id: 'swrv', image: swrv },
-			{ id: 'uni', image: uni },
-			{ id: 'usdc', image: usdc },
-			{ id: 'usdt', iamge: usdt },
-			{ id: 'wbtc', image: wbtc }
-		],
-		[]
-	);
-
-	const findImage = useMemo(() => imagesTo.find(image => tokenCtx.activeToken.id == image.id), [imagesTo, tokenCtx.activeToken.id]);
+	const tokenLogo = useMemo(() => getTokenLogo.find(image => tokenCtx.activeToken.id == image.id), [getTokenLogo, tokenCtx.activeToken.id]);
 
 	return (
 		<>
@@ -39,7 +22,7 @@ const TokenHeaderInfo = () => {
 				</FlexBox>
 				<FlexBox className={styles['select-token-con']} alignItems="center">
 					<FlexBox className={styles['select-token']} alignItems="center">
-						<Image src={findImage?.image ?? ''} alt="logo" width={26} height={26} />
+						<Image src={tokenLogo?.image ?? ''} alt="logo" width={26} height={26} />
 						<h4>{tokenCtx.activeToken.name}</h4>
 						<DownArrowIcon />
 					</FlexBox>
